@@ -16,7 +16,7 @@ export const About = () => {
                   About us<span className="text-danger">.</span>
                 </p>
                 <div className="row gx-3 text-light">
-                  <div className="col py-5">
+                  <div className="col-md-6 py-1">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
                     voluptatem recusandae debitis veniam quisquam nesciunt esse
                     quod sapiente, cum illo ipsum sint enim accusantium eligendi
@@ -25,7 +25,7 @@ export const About = () => {
                     natus ipsam vel officia ut hic, quia explicabo quasi quidem
                     consectetur!
                   </div>
-                  <div className="col py-5">
+                  <div className="col-md-6 py-1">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
                     voluptatem recusandae debitis veniam quisquam nesciunt esse
                     quod sapiente, cum illo ipsum sint enim accusantium eligendi

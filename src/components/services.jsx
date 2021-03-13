@@ -5,13 +5,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 //util component
-const TrustCards = ({text}) => {
+const TrustCards = ({ text, icon, fadeStyle }) => {
   return (
-    <div className="col py-5 p-3 bg-dark text-light mx-3 my-1">
+    <div
+      className="col py-5 p-3 bg-dark text-light mx-3 my-1 rounded"
+      data-aos={fadeStyle}
+      data-aos-anchor-placement="center-bottom"
+    >
       <div className="row">
         <div className="col-md-12">
           <p className="h4 text-center">
-            <i className="bi-facebook px-3 display-1 text-danger"></i>
+            <i className={`bi-${icon} px-3 text-danger h1`}></i>
           </p>
           <p className="h6 text-center py-3">{text}</p>
         </div>
@@ -23,11 +27,27 @@ const TrustCards = ({text}) => {
 export const Services = () => {
   AOS.init();
   const writeups = [
-      'Reliability and security',
-      'Competitive conditions',
-      'Client-oriented approach',
-      'Cutting-edge technologies'
-  ]
+    {
+      text: "Reliability and security",
+      icon: "award-fill",
+      fadeStyle: "fade-right",
+    },
+    {
+      text: "Competitive conditions",
+      icon: "bar-chart-line-fill",
+      fadeStyle: "fade-up",
+    },
+    {
+      text: "Client-oriented approach",
+      icon: "credit-card-2-back-fill",
+      fadeStyle: "fade-down",
+    },
+    {
+      text: "Cutting-edge technologies",
+      icon: "layers-half",
+      fadeStyle: "fade-right",
+    },
+  ];
   return (
     <>
       <div className="container py-5" data-aos="fade-right">
@@ -44,15 +64,8 @@ export const Services = () => {
           </div>
           <div className="row gx-2">
             {writeups.map((cur) => {
-              return <TrustCards text={cur} />;
+              return <TrustCards text={cur.text} icon={cur.icon} fadeStyle={cur.fadeStyle} />;
             })}
-          </div>
-          <div className='row my-3'>
-              <div className='container'>
-                  <div className='col-md-12'>
-                      <button className='btn white-outline2'>Join us</button>
-                  </div>
-              </div>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav px-3">
+          <ul className="navbar-nav px-3 ms-auto">
             <li className="nav-item">
               <a className="nav-link" aria-current="page" href="#">
                 Home
@@ -49,10 +49,6 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <button className="btn btn-outline-secondary ms-auto">sign in</button>
-          <Link to="sign-in">
-            <button className="btn btn-outline-primary mx-2">sign up</button>
-          </Link>
         </div>
       </div>
     </nav>
