@@ -6,7 +6,7 @@ import { DbFirstRow } from "./dashFirstRow";
 import { Chart1 } from "./dbSecRow";
 import Footer from "../footer";
 
-const DbNav = () => {
+export const DbNav = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">

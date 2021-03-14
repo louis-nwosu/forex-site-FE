@@ -16,7 +16,8 @@ import Instuction from "./components/instructions";
 import Sponsors from "./components/sponsors";
 import Footer from "./components/footer";
 import { Chatbot } from "./components/chatbot";
-import Dashboard from "./components/dashboard/dashboard";
+import { Dashboard } from "./components/dashboard/dashboard";
+import { UserProfile, History, Withdraw, Investment } from "./components/dashboard/navigations";
 
 //importing style shheet
 import "./App.css";
@@ -47,7 +48,11 @@ function App() {
         <Switch>
           <Route exact path="/" component={Landingpage} />
           <Route exact path="/sign-in" component={LoginForm} />
-          <Route exact path='/dashboard' component={Dashboard} />
+          <Route exact path="/dashboard" component={Dashboard} />
+          <Route exact path="/profile" component={UserProfile} />
+          <Route exact path="/history" component={History} />
+          <Route exact path="/withdraw" component={Withdraw} />
+          <Route exact path="/investment" component={Investment} />
         </Switch>
       </BrowserRouter>
       {/* <Footer /> */}

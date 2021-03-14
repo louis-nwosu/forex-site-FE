@@ -127,7 +127,7 @@ cursor-pointer {
   DASHBOARD
 */
 .db-nav-link {
-  color: #fff
+  color: #fff;
 }
 
 .db-nav-link:hover {
@@ -141,4 +141,19 @@ cursor-pointer {
 .chart {
   width: auto;
   /* height: 50vh; */
+}
+
+/* 
+  USER PROFILE SECTION
+*/
+#hero-image {
+  background: url("./assets/pierre-borthiry-vBCVcWUyvyM-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 10% 20%;
+  padding-bottom: 1%;
+  backdrop-filter: invert(10px);
+}
+#user-card-plate {
+  margin-top: -15%;
 }

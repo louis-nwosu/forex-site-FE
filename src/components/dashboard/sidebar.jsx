@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 //import stylesheet
 import "../../App.css";
@@ -28,43 +29,51 @@ const SideBarNavs = () => {
       <div className="row">
         <ul className="nav flex-column">
           <li className="nav-item">
-            <a
+            <Link
+              to="/dashboard"
               className="nav-link db-nav-link py-2 my-2 rounded"
               aria-current="page"
-              href="#"
             >
               Dashboard
-            </a>
+            </Link>
           </li>
           <li claclassNamess="nav-item">
-            <a className="nav-link db-nav-link py-2 my-2 rounded" href="#">
+            <Link
+              to="/profile"
+              className="nav-link db-nav-link py-2 my-2 rounded"
+            >
               User Profile
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link db-nav-link  py-2 my-2 rounded" href="#">
-              Wallet
-            </a>
+            <Link
+              to="/history"
+              className="nav-link db-nav-link  py-2 my-2 rounded"
+            >
+              Deposit history
+            </Link>
           </li>
           <li className="nav-item">
-            <a
+            <Link
+              to="withdraw"
               className="nav-link db-nav-link py-2 my-2 rounded"
               href="#"
               tabindex="-1"
               aria-disabled="true"
             >
               Withdraw
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
+            <Link
+            to='/investment'
               className="nav-link db-nav-link py-2 my-2 rounded"
               href="#"
               tabindex="-1"
               aria-disabled="true"
             >
               Investment
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

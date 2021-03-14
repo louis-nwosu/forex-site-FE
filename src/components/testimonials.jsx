@@ -10,7 +10,7 @@ import "../App.css";
 import AOS from "aos";
 
 //util components
-const TestimonialCard = () => {
+export const TestimonialCard = () => {
   return (
     <div className="col-md-12 py-4 blur rounded" data-aos='fade-right'>
       <div class="row">
