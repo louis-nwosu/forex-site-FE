@@ -39,10 +39,9 @@ const Dashboard = ({ loading, dispatch }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  console.log('state', state)
-  // loading: state.loading,
-  // hasError: state.hasError,
-};
+const mapStateToProps = (state) => ({
+  loading: state.loading,
+  hasError: state.hasError,
+});
 // Connect Redux to React
 export default connect(mapStateToProps)(Dashboard);

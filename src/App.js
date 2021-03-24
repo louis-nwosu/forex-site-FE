@@ -65,9 +65,4 @@ function App() {
   );
 }
 
-const mapStateToProps = (state) => {
-
-  console.log('state from the main app', state)
-}
-
-export default connect(mapStateToProps)(App)
+export default App
