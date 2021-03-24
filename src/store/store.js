@@ -33,6 +33,7 @@ const store = (state = initialState, action) => {
         ...state,
         hasError: true,
       };
+    default: return state
   }
 };
 
