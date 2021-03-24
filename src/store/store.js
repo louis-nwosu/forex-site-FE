@@ -1,6 +1,6 @@
 import { actions } from "./actions";
 
-const inialState = {
+const initialState = {
   deposit: "",
   withdraws: "",
   profit: "",
@@ -8,7 +8,7 @@ const inialState = {
   hasError: false,
 };
 
-const store = (state = inialState, action) => {
+const store = (state = initialState, action) => {
   switch (action.type) {
     //has initial server request for a user detail
     case actions.REQUESTUSERDETAILS:
