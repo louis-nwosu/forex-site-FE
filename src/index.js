@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import reportWebVitals from "./reportWebVitals";
+import { composeWithDevTools } from 'redux-devtools-extension'
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
@@ -12,7 +13,7 @@ import thunk from "redux-thunk";
 import store from "./store/store";
 
 //create the redux store
-const reduxStore = createStore(store, applyMiddleware(thunk));
+const reduxStore = createStore(store, composeWithDevTools(applyMiddleware(thunk)));
 
 ReactDOM.render(
   <React.StrictMode>
