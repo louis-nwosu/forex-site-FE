@@ -8,6 +8,9 @@ export const actions = {
   SUBMITLOGINFORM: "SUBMIT_LOGIN_FORM",
   SUBMITLOGINFORMSUCCESS: "SUBMIT_LOGIN_FORM_SUCCESS",
   SUBMITLOGINFORMFAILURE: "SUBMIT_LOGIN_FORM_FAIL",
+  REQUESTUSERDETAILS: "REQUEST_USER_DETAILS",
+  REQUESTUSERDETAILSSUCCESS: "REQUEST_USER_DETAILS_SUCCESS",
+  REQUESTUSERDETAILSFAILUE: "REQUEST_USER_DETAILS_FAILURE",
 };
 
 //SIGN UP ACTIONS
@@ -34,8 +37,11 @@ export function auth(firstName, lastName, email, password, history) {
         email,
         password,
       });
-      dispatch(submitFormSuccess(data.data.user));
-      localStorage.setItem("token", data.data.user);
+      console.log(data.data.user);
+      const fullname = data.data.user.firstName + " " + data.data.user.lastName;
+      localStorage.setItem("user", fullname);
+      console.log(localStorage.getItem("user"));
+      localStorage.setItem("token", data.data.token);
       if (localStorage.getItem("token")) {
         history.push("/dashboard");
       }
@@ -69,7 +75,10 @@ export const loginAuth = (email, password, history) => {
         email,
         password,
       });
-      dispatch(submitLoginFormSuccess(data.data.user));
+      // const fullname = data.data.user.firstName + " " + data.data.user.lastName;
+      // const userID = data.data.user.user._id;
+      // localStorage.setItem("id", userID);
+      // localStorage.setItem("user", fullname);
       localStorage.setItem("token", data.data.token);
       if (localStorage.getItem("token")) {
         history.push("/dashboard");
@@ -77,6 +86,34 @@ export const loginAuth = (email, password, history) => {
     } catch (error) {
       dispatch(submitLoginFormfail());
       console.log(error.message);
+    }
+  };
+};
+
+const requestUserDetail = () => ({
+  type: actions.REQUESTUSERDETAILS,
+});
+
+const requestUserdetailsSuccess = ({ data }) => ({
+  type: actions.REQUESTUSERDETAILSSUCCESS,
+  payload: {
+    data,
+  },
+});
+
+const requestUserDetailFailure = () => ({
+  type: actions.REQUESTUSERDETAILSFAILUE,
+});
+
+export const getUserDetails = (id) => {
+  return async (dispatch) => {
+    dispatch(requestUserDetail());
+    try {
+      const data = axios.get(`http://localhost:8080/posts/details/${id}`);
+      console.log(data);
+    } catch (error) {
+      console.log(error.message);
+      dispatch(requestUserDetailFailure());
     }
   };
 };

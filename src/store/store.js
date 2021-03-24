@@ -1,59 +1,38 @@
 import { actions } from "./actions";
 
 const inialState = {
-  user: {},
-  details: {},
-  formLaoding: false,
+  deposit: "",
+  withdraws: "",
+  profit: "",
+  loading: false,
   hasError: false,
-  signUpLoading: false,
-  signUpError: false,
-  test: 'test'
 };
 
 const store = (state = inialState, action) => {
   switch (action.type) {
-    //handle cases for the sign up
-    case actions.SUBMITFORM:
+    //has initial server request for a user detail
+    case actions.REQUESTUSERDETAILS:
       return {
         ...state,
-        signUpLoading: true,
+        loading: true,
+        hasError: false,
       };
-    case actions.SUBMITFORMSUCCESS:
-      // return {
-      //   ...state,
-      //   user: action.payload,
-      //   signUpLoading: false,
-      //   signUpError: false,
-      // };
-      console.log(action.payload)
-    case actions.SUBMITFORMFAILURE:
+    //handle resetting the state to handle user state if fetching is succesfull
+    case actions.REQUESTUSERDETAILSSUCCESS:
       return {
         ...state,
-        signUpLoading: false,
-        signUpError: true,
+        deposit: action.payload.deposit,
+        withdraws: action.payload.withdraws,
+        profit: action.payload.profit,
+        loading: false,
+        hasError: false,
       };
-
-    //handle cases for the signin
-    case actions.SUBMITLOGINFORM:
+    //handle state of the app if the request isnt succesfull
+    case actions.REQUESTUSERDETAILSFAILUE:
       return {
         ...state,
-        formLaoding: true,
+        hasError: true,
       };
-    case actions.SUBMITLOGINFORMSUCCESS:
-      return {
-        ...state,
-        user: action.payload,
-        formLaoding: false,
-        hasError: false
-      }
-    case actions.SUBMITLOGINFORMFAILURE:
-      return {
-        ...state,
-        hasError: true
-      }
-
-    default:
-      return state;
   }
 };
 

@@ -290,8 +290,6 @@ const LoginForm = ({ dispatch }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  formLaoding: state.formLaoding,
-});
+const mapStateToProps = (state) => ({});
 
 export default connect(mapStateToProps)(LoginForm);

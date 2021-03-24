@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 //import stylesheet
 import "../../App.css";
@@ -24,9 +25,20 @@ const DBmain = () => {
   );
 };
 
-export const Dashboard = () => {
-  return <>
-    <DBmain />
-  </>;
+const Dashboard = ({ loading, dispatch }) => {
+  React.useEffect(() => {
+    console.log("e choke!!", loading);
+  }, [dispatch]);
+  return (
+    <>
+      <DBmain />
+    </>
+  );
 };
 
+const mapStateToProps = (state) => ({
+  loading: state.loading,
+  hasError: state.hasError,
+});
+// Connect Redux to React
+export default connect(mapStateToProps)(Dashboard);

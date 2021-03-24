@@ -12,12 +12,16 @@ import { MissionStatement } from "./components/mission-stat";
 import { Freq } from "./components/freq-asked";
 import { Testimonials } from "./components/testimonials";
 import LoginForm from "./components/login/loginForm";
-import Instuction from "./components/instructions";
 import Sponsors from "./components/sponsors";
 import Footer from "./components/footer";
 import { Chatbot } from "./components/chatbot";
-import { Dashboard } from "./components/dashboard/dashboard";
-import { UserProfile, History, Withdraw, Investment } from "./components/dashboard/navigations";
+import Dashboard from "./components/dashboard/dashboard";
+import {
+  UserProfile,
+  History,
+  Withdraw,
+  Investment,
+} from "./components/dashboard/navigations";
 
 //importing style shheet
 import "./App.css";
@@ -34,9 +38,9 @@ const Landingpage = () => {
       <Services />
       <Freq />
       <Testimonials />
-      {/* <Instuction /> */}
       <Sponsors />
       <Chatbot />
+      <Footer />
     </>
   );
 };

@@ -7,7 +7,7 @@ import "../App.css";
 const ChatPlate = () => {
   return (
     <>
-      <div className="container py-2 rounded bg-light mb-1" id="chat">
+      <div className="container py-2 rounded bg-dark text-light mb-1" id="chat">
         <div className="row">
           <div className="col-md-12">
             <p className="h5">
@@ -17,7 +17,7 @@ const ChatPlate = () => {
         </div>
         <div className="row">
           <div className="col-md-8 me-auto mb-2">
-            <p className="bg-primary text-light p-2 rounded my-3">
+            <p className="bg-primary text-light p-2 rounded my-3" style={{fontSize: '10px'}}>
               Hello, how are you?
             </p>
           </div>
@@ -47,7 +47,7 @@ const ChatPlate = () => {
 };
 
 export const Chatbot = () => {
-  const [showChat, setShowChat] = React.useState(true);
+  const [showChat, setShowChat] = React.useState(false);
   const toggleShowChat = () => {
     setShowChat(!showChat);
   };
