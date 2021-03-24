@@ -11,6 +11,7 @@ import { Main } from "./main";
 const DBmain = () => {
   return (
     <>
+
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-2 side-nav bg-dark">
@@ -26,8 +27,10 @@ const DBmain = () => {
 };
 
 const Dashboard = ({ loading, dispatch }) => {
+  console.log('loading', loading, dispatch)
   React.useEffect(() => {
     console.log("e choke!!", loading);
+    console.log('who de breeeet!!')
   }, [dispatch]);
   return (
     <>
@@ -36,9 +39,10 @@ const Dashboard = ({ loading, dispatch }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  loading: state.loading,
-  hasError: state.hasError,
-});
+const mapStateToProps = (state) => {
+  console.log('state', state)
+  // loading: state.loading,
+  // hasError: state.hasError,
+};
 // Connect Redux to React
 export default connect(mapStateToProps)(Dashboard);
