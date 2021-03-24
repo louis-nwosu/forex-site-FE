@@ -1,6 +1,7 @@
 //import root react component
 import React from "react";
 import "./App.css";
+import {connect} from 'react-redux'
 import { BrowserRouter, Route, Router, Switch } from "react-router-dom";
 
 //making local components
