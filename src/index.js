@@ -15,14 +15,22 @@ import store from "./store/store";
 //create the redux store
 const reduxStore = createStore(store, composeWithDevTools(applyMiddleware(thunk)));
 
-ReactDOM.render(
-  <React.StrictMode>
+const app = (
     <Provider store={reduxStore}>
-      <App />
+                <App />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+)
+
+ReactDOM.render(app, document.getElementById('root'))
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Provider store={reduxStore}>
+//       <App />
+//     </Provider>
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
