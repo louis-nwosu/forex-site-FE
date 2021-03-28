@@ -14,7 +14,7 @@ const data = {
       borderWidth: 2,
       hoverBackgroundColor: "rgba(255,99,132,0.4)",
       hoverBorderColor: "rgba(255,99,132,1)",
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: [, 0, 0, , 0, 0, 0],
     },
   ],
 };
@@ -23,13 +23,13 @@ const LineData = {
   labels: ["January", "February", "March", "April", "May"],
   datasets: [
     {
-      label: "investment",
+      label: "inv",
       fill: false,
       lineTension: 0.5,
       backgroundColor: "rgba(75,192,192,1)",
       borderColor: "rgba(225,225,225,0.5)",
       borderWidth: 2,
-      data: [65, 59, 80, 81, 56],
+      data: [0, 0, 0, 0, 0],
     },
   ],
 };
@@ -37,9 +37,9 @@ const LineData = {
 export const Chart1 = () => {
   return (
     <>
-      <div className="container py-3">
+      <div className="container py-1">
         <div className="row">
-          <div className="col-md-8 mx-3 px-3 bg-dark text-light py-1 rounded chart">
+          <div className="col-md-8 bg-dark text-light rounded chart my-1">
             <p className="h3 py-3">Investment bonus</p>
             <Bar
               data={data}
@@ -50,7 +50,7 @@ export const Chart1 = () => {
               }}
             />
           </div>
-          <div className="col-md-3 mx-3 px-3 bg-dark text-light py-3 rounded chart">
+          <div className="col-md-3 bg-dark text-light mx-auto  py-3 rounded chart">
             <div className="row">
               <div className="col-md-12 text-light p-3">
                 <p className="display-5">Gains</p>
@@ -119,7 +119,7 @@ export const Chart1 = () => {
           </div>
         </div>
         <div className="row py-5">
-          <div className="col-md-12 py-3 px-2 bg-dark rounded mx-auto chart">
+          <div className="col-md-12 py-3 px-2 bg-dark rounded mx-auto chart my-1">
             <Line
               data={LineData}
               options={{

@@ -11,7 +11,7 @@ const Footer = () => {
                 <div className="row">
                   <div className="col-12">
                     <p className="text-light h5 py-1">
-                      Scam<spam className="text-danger">FX</spam>
+                      Baillie-Glifford<spam className="text-danger">FX</spam>
                     </p>
                   </div>
                   <div className="col-12">

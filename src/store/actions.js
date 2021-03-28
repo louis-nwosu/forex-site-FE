@@ -1,4 +1,5 @@
 import axios from "axios";
+import loginForm from "../components/login/loginForm";
 
 //GLOBAL ACTIONS
 export const actions = {
@@ -37,11 +38,12 @@ export function auth(firstName, lastName, email, password, history) {
         email,
         password,
       });
-      console.log(data.data.user);
-      const fullname = data.data.user.firstName + " " + data.data.user.lastName;
+      const fullname = data.data.savedUser.firstName + " " + data.data.savedUser.lastName;
+      const userID = data.data.savedUser._id;
       localStorage.setItem("user", fullname);
-      console.log(localStorage.getItem("user"));
       localStorage.setItem("token", data.data.token);
+      localStorage.setItem("userID", userID);
+      dispatch(submitLoginFormSuccess());
       if (localStorage.getItem("token")) {
         history.push("/dashboard");
       }
@@ -75,10 +77,10 @@ export const loginAuth = (email, password, history) => {
         email,
         password,
       });
-      // const fullname = data.data.user.firstName + " " + data.data.user.lastName;
-      // const userID = data.data.user.user._id;
-      // localStorage.setItem("id", userID);
-      // localStorage.setItem("user", fullname);
+      const fullname = data.data.user.firstName + " " + data.data.user.lastName;
+      const userID = data.data.user._id;
+      localStorage.setItem("userID", userID);
+      localStorage.setItem("user", fullname);
       localStorage.setItem("token", data.data.token);
       if (localStorage.getItem("token")) {
         history.push("/dashboard");
@@ -109,8 +111,9 @@ export const getUserDetails = (id) => {
   return async (dispatch) => {
     dispatch(requestUserDetail());
     try {
-      const data = axios.get(`http://localhost:8080/posts/details/${id}`);
-      console.log(data);
+      const data = await axios.get(`http://localhost:8080/posts/details/${id}`);
+      console.log(data.data);
+      dispatch(requestUserdetailsSuccess(data.data));
     } catch (error) {
       console.log(error.message);
       dispatch(requestUserDetailFailure());

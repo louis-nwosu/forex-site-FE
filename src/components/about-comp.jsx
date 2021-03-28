@@ -17,22 +17,20 @@ export const About = () => {
                 </p>
                 <div className="row gx-3 text-light">
                   <div className="col-md-6 py-1">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
-                    voluptatem recusandae debitis veniam quisquam nesciunt esse
-                    quod sapiente, cum illo ipsum sint enim accusantium eligendi
-                    excepturi praesentium earum ullam. Atque, asperiores quas
-                    maxime vitae explicabo repudiandae. Veritatis velit cum
-                    natus ipsam vel officia ut hic, quia explicabo quasi quidem
-                    consectetur!
+                    We are a trusted and reliable forex and crypto-currency
+                    Investments agaency dedicated to helping our customers get
+                    the best of thier investments.We offer you an interesting
+                    investment plans, an international working environment and
+                    excellent career opportunities, qualified support to
+                    partners at all stages of cooperation.
                   </div>
                   <div className="col-md-6 py-1">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
-                    voluptatem recusandae debitis veniam quisquam nesciunt esse
-                    quod sapiente, cum illo ipsum sint enim accusantium eligendi
-                    excepturi praesentium earum ullam. Atque, asperiores quas
-                    maxime vitae explicabo repudiandae. Veritatis velit cum
-                    natus ipsam vel officia ut hic, quia explicabo quasi quidem
-                    consectetur!
+                    Baillie-walsh is the company of beneficial short-term and
+                    long-term investments aimed at making a profit by investing
+                    in constantly growing shares of the Tokyo Stock Exchange.Our
+                    activities are focused on establishing a long-term trust
+                    relationship between the company, its partners and
+                    customers. Our goal - a stable income of each investor.
                   </div>
                 </div>
               </div>

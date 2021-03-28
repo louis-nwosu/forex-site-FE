@@ -56,14 +56,14 @@ const Questions = () => {
         "Successful investment management companies base their business on a core investment philosophy, and Bynamic is no different. Although we offer innovative and specific strategies through digital asset funds, an overarching theme runs through the investment guidance we provide to clients— focus on those things within your control. There are basically four principles that we attach great importance to: ",
     },
     {
-      question: "What scamFX?",
+      question: "What is baillie-walshFX?",
       answer:
-        "Swift Investment is a registered digital asset investment firm based in the US. The platform, which includes advanced basic and technical analysis at the source of high return performance, offers high & fixed interest return. Aiming for success with its international investor network, experienced team, privileged information from business and technology world; Bynamic stands out from its competitors with its proven quality and ease of use. The company, which is managed under the leadership of people who think and foresee the future, is committed to achieving high returns from well-diversified portfolios and prioritizing clients. ",
+        "Baillie-walsh Investment is a registered digital asset investment firm based in the US. The platform, which includes advanced basic and technical analysis at the source of high return performance, offers high & fixed interest return. Aiming for success with its international investor network, experienced team, privileged information from business and technology world; Bynamic stands out from its competitors with its proven quality and ease of use. The company, which is managed under the leadership of people who think and foresee the future, is committed to achieving high returns from well-diversified portfolios and prioritizing clients. ",
     },
     {
       question: "How can i asked for help?",
       answer:
-        "Swift Investment is a registered digital asset investment firm based in the US. The platform, which includes advanced basic and technical analysis at the source of high return performance, offers high & fixed interest return. Aiming for success with its international investor network, experienced team, privileged information from business and technology world; Bynamic stands out from its competitors with its proven quality and ease of use. The company, which is managed under the leadership of people who think and foresee the future, is committed to achieving high returns from well-diversified portfolios and prioritizing clients. ",
+        " register and sign up to trade or speak to one of our customer support assistant. ",
     },
   ];
 

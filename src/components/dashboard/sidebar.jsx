@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 //import icons..
-import { BsFillBarChartFill } from "react-icons/bs";
+import { BsFillBarChartFill, BsFillAspectRatioFill, BsBoxArrowInRight } from "react-icons/bs";
 import { AiTwotoneContainer } from "react-icons/ai";
 import { AiOutlineFolderOpen } from "react-icons/ai";
 
@@ -35,7 +35,7 @@ const SideBarNavs = () => {
               className="nav-link db-nav-link py-2 my-2 rounded"
               aria-current="page"
             >
-              <BsFillBarChartFill className='mx-1' /> Dashboard
+              <BsFillBarChartFill className="mx-1" /> Dashboard
             </Link>
           </li>
           <li claclassNamess="nav-item">
@@ -43,36 +43,31 @@ const SideBarNavs = () => {
               to="/profile"
               className="nav-link db-nav-link py-2 my-2 rounded"
             >
-              <AiTwotoneContainer className='mx-1' /> Profile
+              <AiTwotoneContainer className="mx-1" /> Profile
             </Link>
           </li>
           <li className="nav-item">
             <Link
-              to="/history  "
+              to="/history"
               className="nav-link db-nav-link  py-2 my-2 rounded"
             >
-              <AiOutlineFolderOpen className='mx-1' /> history
+              <AiOutlineFolderOpen className="mx-1" /> history
             </Link>
           </li>
           <li className="nav-item">
             <Link
               to="withdraw"
               className="nav-link db-nav-link py-2 my-2 rounded"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
             >
-              Withdraw
+              <BsBoxArrowInRight className="mx-1" /> Withdraw
             </Link>
           </li>
           <li className="nav-item">
             <Link
               to="/investment"
               className="nav-link db-nav-link py-2 my-2 rounded"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
             >
+              <BsFillAspectRatioFill className="mx-1" />
               Investment
             </Link>
           </li>

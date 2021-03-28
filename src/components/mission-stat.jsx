@@ -17,7 +17,7 @@ const MissionWriteUp = () => {
             <span className="text-danger">.</span>
           </p>
           <p className="py-3">
-            Swift Investment Global Ltd is a registered investment platform
+            Baillie-walsh Investment Global Ltd is a registered investment platform
             providing digital asset investment management services to
             individuals. We provide a dynamic investment solution to clients in
             need of a self-operating portfolio, as well as a smart fund with

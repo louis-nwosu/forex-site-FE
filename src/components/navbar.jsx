@@ -23,11 +23,11 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav px-3">
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
                 About
@@ -49,10 +49,11 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <button className="btn btn-outline-secondary ms-auto">sign in</button>
-          <Link to="sign-in">
-            <button className="btn btn-outline-primary mx-2">sign up</button>
-          </Link>
+          <div className="ms-auto">
+            <Link to="sign-in">
+              <button className="btn btn-outline-primary mx-2">sign up</button>
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

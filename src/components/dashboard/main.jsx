@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, useHistory } from "react-router-dom";
 
 //import components
 import { DbFirstRow } from "./dashFirstRow";
@@ -6,12 +7,13 @@ import { Chart1 } from "./dbSecRow";
 import Footer from "../footer";
 
 export const DbNav = () => {
+  const history = useHistory();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" href="#">
           Baillie Glifford<span className="text-danger">FX</span>
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -26,18 +28,18 @@ export const DbNav = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto py-2 px-5">
             <li className="nav-item">
-              <a
+              <Link
+                to="/dashboard"
                 className="nav-link active animated bounceInDown"
                 aria-current="page"
-                href="#"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-2">
-              <a className="nav-link" href="#">
-                Account
-              </a>
+              <Link to="/dashboard" className="nav-link" href="#">
+                dashboard
+              </Link>
             </li>
             <li className="nav-item mx-2">
               <div className="dropdown">
@@ -55,32 +57,31 @@ export const DbNav = () => {
                   aria-labelledby="dropdownMenuButton1"
                 >
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
+                    <Link to="profile" className="dropdown-item" href="#">
+                      profile
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
+                    <Link to="withdraw" className="dropdown-item" href="#">
+                      withdraw
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
+                    <Link className="dropdown-item" href="#">
+                      notification
+                    </Link>
                   </li>
                 </ul>
               </div>
             </li>
-            <li className="nav-item mx-2">
-              <a
-                className="nav-link"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-                Log out
-              </a>
+            <li
+              className="nav-item mx-2"
+              onClick={() => {
+                localStorage.clear();
+                history.push("/");
+              }}
+            >
+              <Link className="nav-link">Log out</Link>
             </li>
           </ul>
         </div>
@@ -89,11 +90,11 @@ export const DbNav = () => {
   );
 };
 
-const DbDashboard = () => {
+const DbDashboard = ({ deposit, withdraws, profit }) => {
   return (
     <>
       <DbNav />
-      <DbFirstRow />
+      <DbFirstRow dept={deposit} wt={withdraws} prt={profit} />
       <Chart1 />
       <div className="mx-3">
         <Footer />
@@ -102,12 +103,10 @@ const DbDashboard = () => {
   );
 };
 
-
-
-export const Main = () => {
+export const Main = ({ deposit, withdraws, profit }) => {
   return (
     <>
-     <DbDashboard />
+      <DbDashboard deposit={deposit} withdraws={withdraws} profit={profit} />
     </>
   );
 };

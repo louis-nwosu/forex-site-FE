@@ -97,7 +97,7 @@
   CHAT
 */
 #chat {
-  height: 50vh;
+  height: auto;
   width: auto;
   overflow-y: scroll;
 }

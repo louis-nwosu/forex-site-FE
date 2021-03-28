@@ -23,19 +23,16 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav px-3 ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
+            <Link to="/">
+              <li className="nav-item">
+                <a className="nav-link" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+            </Link>
             <li className="nav-item">
               <a className="nav-link" href="#">
                 About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Investments
               </a>
             </li>
             <li className="nav-item">

@@ -1,15 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import { connect } from "react-redux";
 
 //local imports
 import NavBar from "../nav2";
 import { auth, loginAuth } from "../../store/actions";
+import Footer from "../footer";
 
 //dependency
 import AOS from "aos";
 import "aos/dist/aos.css";
-import axios from "axios";
 
 //import images
 import avater from "../../assets/avatar_placeholder_temporary.png";
@@ -115,6 +115,10 @@ const Form = ({ loginFunc, toggle }) => {
                     className="form-control"
                     id="exampleInputPassword1"
                   />
+                  <div id="passwordHelp" class="form-text">
+                    for extra security, password must be 8 or more characters
+                    long.
+                  </div>
                 </div>
                 <div className="col-md-6 ms-auto">
                   <label for="exampleInputPassword1" className="form-label">
@@ -222,6 +226,9 @@ const SignInForm = ({ toggle, signInfunc }) => {
                 className="form-control"
                 id="exampleInputPassword1"
               />
+              <div id="passwordHelp" class="form-text">
+                for extra security, password must be 8 or more characters long.
+              </div>
             </div>
           </div>
           <div class="d-grid gap-2 px-5 py-3">
@@ -285,7 +292,9 @@ const LoginForm = ({ dispatch }) => {
           </div>
         </div>
       </div>
-      <div className="container-fluid py-5 bg-dark"></div>
+      <div className="container-fluid">
+        <Footer />
+      </div>
     </>
   );
 };

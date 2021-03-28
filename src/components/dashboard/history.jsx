@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../footer";
 
 //local imports
 import { DbNav } from "./main";
@@ -178,7 +179,11 @@ export const Historysec = () => {
                 <div className="col-md-12">
                   <ul className="nav nav-tabs">
                     <li className="nav-item">
-                      <a className="nav-link active" aria-current="page" href="#">
+                      <a
+                        className="nav-link active"
+                        aria-current="page"
+                        href="#"
+                      >
                         Top trades
                       </a>
                     </li>
@@ -208,6 +213,9 @@ export const Historysec = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container-fluid">
+        <Footer />
       </div>
     </>
   );

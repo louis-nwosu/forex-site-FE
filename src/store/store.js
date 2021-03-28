@@ -1,9 +1,9 @@
 import { actions } from "./actions";
 
 const initialState = {
-  deposit: "",
-  withdraws: "",
-  profit: "",
+  deposit: 0,
+  withdraws: 0,
+  profit: 0,
   loading: false,
   hasError: false,
 };
@@ -23,7 +23,6 @@ const store = (state = initialState, action) => {
         ...state,
         deposit: action.payload.deposit,
         withdraws: action.payload.withdraws,
-        profit: action.payload.profit,
         loading: false,
         hasError: false,
       };
@@ -33,7 +32,8 @@ const store = (state = initialState, action) => {
         ...state,
         hasError: true,
       };
-    default: return state
+    default:
+      return state;
   }
 };
 
