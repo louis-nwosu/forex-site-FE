@@ -38,7 +38,9 @@ export function auth(firstName, lastName, email, password, history) {
         email,
         password,
       });
-      const fullname = data.data.savedUser.firstName + " " + data.data.savedUser.lastName;
+      console.log(data);
+      const fullname =
+        data.data.savedUser.firstName + " " + data.data.savedUser.lastName;
       const userID = data.data.savedUser._id;
       localStorage.setItem("user", fullname);
       localStorage.setItem("token", data.data.token);
